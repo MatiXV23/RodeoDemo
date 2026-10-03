@@ -14,7 +14,7 @@
 
 <br />
 
-<a href="URL_DE_LA_DEMO"><img src="https://img.shields.io/badge/%E2%96%B6%20%20Probar%20la%20demo-gratis%20y%20sin%20registro-2f5e43?style=for-the-badge&labelColor=1f3529" alt="Probar la demo" height="42" /></a>
+<a href="https://matixv23.github.io/RodeoDemo/"><img src="https://img.shields.io/badge/%E2%96%B6%20%20Probar%20la%20demo-gratis%20y%20sin%20registro-2f5e43?style=for-the-badge&labelColor=1f3529" alt="Probar la demo" height="42" /></a>
 
 </div>
 
@@ -241,7 +241,7 @@ Algunas ideas para arrancar:
 
 **Menos planillas, más campo.** Probá Rodeo con datos de ejemplo y mirá lo que puede hacer por tu establecimiento.
 
-<a href="URL_DE_LA_DEMO"><img src="https://img.shields.io/badge/%E2%96%B6%20%20Probala%20ahora-2f5e43?style=for-the-badge&labelColor=1f3529" alt="Probala ahora" height="42" /></a>
+<a href="https://matixv23.github.io/RodeoDemo/"><img src="https://img.shields.io/badge/%E2%96%B6%20%20Probala%20ahora-2f5e43?style=for-the-badge&labelColor=1f3529" alt="Probala ahora" height="42" /></a>
 
 ¿Querés usarla en tu campo o que la veamos juntos? Escribinos a **CORREO_DE_CONTACTO**.
 
