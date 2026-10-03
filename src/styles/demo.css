@@ -1,0 +1,565 @@
+/* Estilos propios de la demo: badge, usuarios de prueba, panel flotante y correos simulados.
+   Usan la misma paleta que app.css para que la demo se vea como la app. */
+
+.demo-pill {
+  color: #7a5200;
+  letter-spacing: .08em;
+  background: #f7e7b9;
+  border: 1px solid #ecd48f;
+  border-radius: 999px;
+  align-items: center;
+  padding: 2px 7px;
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.3;
+  display: inline-flex;
+}
+
+.brand .brand-demo {
+  letter-spacing: .1em;
+  color: #e9d9a6;
+  background: #ffffff14;
+  border-color: #e9d9a640;
+  align-self: center;
+  margin-left: 10px;
+  font-size: 9px;
+}
+
+/* ---------- Login: usuarios de prueba ---------- */
+
+.auth-form:has(.demo-accounts) {
+  max-width: 560px;
+}
+
+.demo-accounts {
+  margin-top: 26px;
+}
+
+.demo-accounts-head {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.demo-accounts-head strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.demo-accounts-head small {
+  color: #879776;
+  flex-basis: 100%;
+  font-size: 11.5px;
+}
+
+.demo-account-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  display: grid;
+}
+
+.demo-account {
+  background: #fff;
+  border: 1px solid #e2e8d9;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 9px;
+  padding: 12px;
+  display: flex;
+  box-shadow: 0 1px 2px #223a2108;
+}
+
+.demo-account-top {
+  align-items: center;
+  gap: 9px;
+  display: flex;
+}
+
+.demo-account-top strong {
+  font-size: 13px;
+  display: block;
+}
+
+.demo-account-top small {
+  color: #7b847c;
+  font-size: 11px;
+  display: block;
+}
+
+.demo-account p {
+  color: #5b6b60;
+  flex: 1;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.demo-account .btn {
+  width: 100%;
+}
+
+.demo-account.role-owner .avatar { background: #cdd8bb; }
+.demo-account.role-admin .avatar { background: #d6e3ea; color: #2c4a5a; }
+.demo-account.role-operator .avatar { background: #f1dfc2; color: #6a4a1c; }
+.demo-account.role-viewer .avatar { background: #e5dcef; color: #4c3a63; }
+
+.demo-divider {
+  color: #98a58d;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  font-size: 11px;
+  display: flex;
+}
+
+.demo-divider::before,
+.demo-divider::after {
+  content: "";
+  background: #e2e8d9;
+  flex: 1;
+  height: 1px;
+}
+
+.demo-accounts + .demo-divider + form {
+  margin-top: 16px;
+}
+
+/* ---------- Botón flotante y panel ---------- */
+
+.demo-fab-wrap {
+  z-index: 40;
+  position: fixed;
+  bottom: 18px;
+  left: calc(var(--sidebar-width, 238px) + 18px);
+}
+
+.demo-fab {
+  color: #f6f8ed;
+  background: #2b4434;
+  border: 1px solid #ffffff1f;
+  border-radius: 999px;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px 8px 12px;
+  display: inline-flex;
+  box-shadow: 0 8px 22px #1c302433, 0 1px 3px #1c302433;
+}
+
+.demo-fab:hover {
+  background: #243b2c;
+}
+
+.demo-fab.offline {
+  background: #7a5a24;
+}
+
+.demo-fab-text {
+  text-align: left;
+  line-height: 1.15;
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-fab-text strong {
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #d9e7a8;
+}
+
+.demo-fab-text small {
+  font-size: 12px;
+}
+
+.demo-fab .flip {
+  transform: rotate(180deg);
+}
+
+.demo-panel {
+  background: #fff;
+  border: 1px solid #e2e8d9;
+  border-radius: 14px;
+  width: min(390px, calc(100vw - 32px));
+  max-height: min(78dvh, 720px);
+  margin-bottom: 10px;
+  overflow: auto;
+  box-shadow: 0 18px 50px #1c302438, 0 2px 6px #1c302420;
+  animation: demo-in .16s ease-out;
+}
+
+@keyframes demo-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.demo-panel-head {
+  background: #fbfcf8;
+  border-bottom: 1px solid #edf0e8;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 14px 12px 16px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.demo-panel-head > div {
+  flex: 1;
+}
+
+.demo-panel-head strong {
+  font-size: 14px;
+  display: block;
+}
+
+.demo-panel-head small {
+  color: #7b847c;
+  font-size: 11.5px;
+}
+
+.demo-panel-head .demo-pill {
+  margin-top: 2px;
+}
+
+.demo-section {
+  border-bottom: 1px solid #edf0e8;
+  padding: 14px 16px;
+}
+
+.demo-label,
+.demo-label-row {
+  color: #6f7d68;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-size: 10.5px;
+  font-weight: 650;
+  display: flex;
+}
+
+.demo-label-row {
+  justify-content: space-between;
+}
+
+.demo-label-row .demo-label {
+  margin: 0;
+}
+
+.demo-label-row small {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.demo-users {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  display: grid;
+}
+
+.demo-user {
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e2e8d9;
+  border-radius: 9px;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  display: flex;
+}
+
+.demo-user .avatar {
+  width: 28px;
+  height: 28px;
+  font-size: 10.5px;
+}
+
+.demo-user strong {
+  font-size: 12px;
+  display: block;
+}
+
+.demo-user small {
+  color: #7b847c;
+  font-size: 10.5px;
+}
+
+.demo-user.active {
+  background: #eef3e6;
+  border-color: #9fb88c;
+  box-shadow: inset 0 0 0 1px #9fb88c;
+}
+
+.demo-help {
+  color: #6b7a70;
+  margin-top: 10px !important;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.demo-toggles {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.demo-toggle {
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  display: flex;
+}
+
+.demo-toggle > span {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-size: 13px;
+  font-weight: 550;
+  display: flex;
+}
+
+.demo-toggle small {
+  color: #7b847c;
+  flex-basis: 100%;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.demo-toggle input[type=checkbox] {
+  appearance: none;
+  cursor: pointer;
+  background: #dfe4d9;
+  border-radius: 999px;
+  flex-shrink: 0;
+  width: 36px;
+  height: 21px;
+  margin-top: 1px;
+  transition: background .15s;
+  position: relative;
+}
+
+.demo-toggle input[type=checkbox]::after {
+  content: "";
+  background: #fff;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  transition: transform .15s;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 1px 2px #0003;
+}
+
+.demo-toggle input[type=checkbox]:checked {
+  background: #355d43;
+}
+
+.demo-toggle input[type=checkbox]:checked::after {
+  transform: translateX(15px);
+}
+
+.demo-toggle input[type=checkbox]:focus-visible {
+  outline: 3px solid #89a970;
+  outline-offset: 2px;
+}
+
+.demo-rate {
+  gap: 6px;
+  margin: -4px 0 0 24px;
+  display: flex;
+}
+
+.demo-rate button {
+  background: #fff;
+  border: 1px solid #e2e8d9;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 11.5px;
+}
+
+.demo-rate button.active {
+  color: #fff;
+  background: #355d43;
+  border-color: #355d43;
+}
+
+.demo-checklist {
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.demo-checklist li {
+  border-radius: 8px;
+  grid-template-columns: 20px 1fr auto;
+  align-items: start;
+  gap: 10px;
+  padding: 8px 6px;
+  display: grid;
+}
+
+.demo-checklist li:hover {
+  background: #f7f9f4;
+}
+
+.demo-checklist strong {
+  font-size: 12.5px;
+  font-weight: 600;
+  display: block;
+}
+
+.demo-checklist small {
+  color: #7b847c;
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.45;
+  display: block;
+}
+
+.demo-checklist li.done strong {
+  color: #7b8f6b;
+  text-decoration: line-through;
+  text-decoration-color: #b8c6aa;
+}
+
+.demo-checklist .text-link {
+  white-space: nowrap;
+  margin-top: 1px;
+  font-size: 12px;
+}
+
+.demo-check {
+  color: #fff;
+  background: #fff;
+  border: 1.5px solid #c5cfbb;
+  border-radius: 5px;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  padding: 0;
+  display: grid;
+}
+
+li.done .demo-check {
+  background: #5d8a54;
+  border-color: #5d8a54;
+}
+
+.demo-panel-foot {
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px 14px;
+  display: flex;
+}
+
+.demo-panel-foot .btn {
+  flex: 1;
+}
+
+/* ---------- Correos simulados ---------- */
+
+.demo-mail-dialog [data-slot=dialog-title] {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.demo-mail {
+  background: #fbfcf8;
+  border: 1px solid #e2e8d9;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  display: flex;
+}
+
+.demo-mail dl {
+  gap: 4px;
+  margin: 0;
+  display: grid;
+}
+
+.demo-mail dl > div {
+  gap: 8px;
+  font-size: 12.5px;
+  display: flex;
+}
+
+.demo-mail dt {
+  color: #7b847c;
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.demo-mail dd {
+  word-break: break-word;
+  margin: 0;
+  font-weight: 550;
+}
+
+.demo-mail p {
+  color: #3f4f44;
+  white-space: pre-line;
+  border-top: 1px dashed #dfe4d9;
+  padding-top: 10px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.demo-mail .btn {
+  align-self: flex-start;
+}
+
+.demo-outbox {
+  flex-direction: column;
+  gap: 14px;
+  max-height: 60vh;
+  overflow: auto;
+  display: flex;
+}
+
+.demo-outbox > div > small {
+  color: #7b847c;
+  margin-bottom: 4px;
+  font-size: 11px;
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 767px) {
+  .demo-fab-wrap {
+    left: 12px;
+    bottom: calc(86px + env(safe-area-inset-bottom));
+  }
+  .demo-fab {
+    padding: 7px 11px;
+  }
+  .demo-fab-text small {
+    display: none;
+  }
+  .demo-account-grid {
+    grid-template-columns: 1fr;
+  }
+  .auth-form:has(.demo-accounts) {
+    max-width: 100%;
+  }
+}
+
+@media print {
+  .demo-fab-wrap {
+    display: none;
+  }
+}

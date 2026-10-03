@@ -1,0 +1,8 @@
+node_modules
+dist
+test-results
+*.log
+.DS_Store
+
+# Configuración local de Claude Code
+.claude/
